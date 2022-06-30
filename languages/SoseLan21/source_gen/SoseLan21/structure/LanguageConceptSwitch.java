@@ -9,28 +9,38 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int BolleanType = 0;
-  public static final int ILangContent = 1;
-  public static final int IStatement = 2;
-  public static final int IntegerType = 3;
-  public static final int SoSeWorksheet = 4;
-  public static final int Type = 5;
-  public static final int Variable = 6;
-  public static final int VariableDeclaration = 7;
-  public static final int VariableReference = 8;
-  public static final int semicolon = 9;
+  public static final int BinaryExpression = 0;
+  public static final int BolleanType = 1;
+  public static final int Expression = 2;
+  public static final int ILangContent = 3;
+  public static final int IStatement = 4;
+  public static final int IntegerType = 5;
+  public static final int Operation = 6;
+  public static final int Plusoperation = 7;
+  public static final int SoSeWorksheet = 8;
+  public static final int Type = 9;
+  public static final int Variable = 10;
+  public static final int VariableDeclaration = 11;
+  public static final int VariableReference = 12;
+  public static final int literal_integer = 13;
+  public static final int semicolon = 14;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x49e25ac895434e93L, 0xad91f1c8e0f96a25L);
+    builder.put(0x45bee2a579a1833fL, BinaryExpression);
     builder.put(0x7a4fffd757936caaL, BolleanType);
+    builder.put(0x45bee2a579a05c46L, Expression);
     builder.put(0x7a4fffd757936cabL, ILangContent);
     builder.put(0x7a4fffd75793e861L, IStatement);
     builder.put(0x7a4fffd757936cb1L, IntegerType);
+    builder.put(0x45bee2a579a1065dL, Operation);
+    builder.put(0x45bee2a579a1203eL, Plusoperation);
     builder.put(0x7a4fffd757936ca7L, SoSeWorksheet);
     builder.put(0x7a4fffd75793e85cL, Type);
     builder.put(0x7a4fffd757936cb2L, Variable);
     builder.put(0x7a4fffd757936fe1L, VariableDeclaration);
     builder.put(0x7a4fffd757936fe2L, VariableReference);
+    builder.put(0x45bee2a579a09f3aL, literal_integer);
     builder.put(0x4dbab519a5f536c7L, semicolon);
     myIndex = builder.seal();
   }

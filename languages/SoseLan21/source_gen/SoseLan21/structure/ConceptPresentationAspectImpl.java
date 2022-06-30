@@ -9,15 +9,20 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_BinaryExpression;
   private ConceptPresentation props_BolleanType;
+  private ConceptPresentation props_Expression;
   private ConceptPresentation props_ILangContent;
   private ConceptPresentation props_IStatement;
   private ConceptPresentation props_IntegerType;
+  private ConceptPresentation props_Operation;
+  private ConceptPresentation props_Plusoperation;
   private ConceptPresentation props_SoSeWorksheet;
   private ConceptPresentation props_Type;
   private ConceptPresentation props_Variable;
   private ConceptPresentation props_VariableDeclaration;
   private ConceptPresentation props_VariableReference;
+  private ConceptPresentation props_literal_integer;
   private ConceptPresentation props_semicolon;
 
   @Override
@@ -25,6 +30,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.BinaryExpression:
+        if (props_BinaryExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_BinaryExpression = cpb.create();
+        }
+        return props_BinaryExpression;
       case LanguageConceptSwitch.BolleanType:
         if (props_BolleanType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -32,6 +44,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BolleanType = cpb.create();
         }
         return props_BolleanType;
+      case LanguageConceptSwitch.Expression:
+        if (props_Expression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Expression = cpb.create();
+        }
+        return props_Expression;
       case LanguageConceptSwitch.ILangContent:
         if (props_ILangContent == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -51,6 +69,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IntegerType = cpb.create();
         }
         return props_IntegerType;
+      case LanguageConceptSwitch.Operation:
+        if (props_Operation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Operation");
+          props_Operation = cpb.create();
+        }
+        return props_Operation;
+      case LanguageConceptSwitch.Plusoperation:
+        if (props_Plusoperation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("+");
+          props_Plusoperation = cpb.create();
+        }
+        return props_Plusoperation;
       case LanguageConceptSwitch.SoSeWorksheet:
         if (props_SoSeWorksheet == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -85,6 +117,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VariableReference = cpb.create();
         }
         return props_VariableReference;
+      case LanguageConceptSwitch.literal_integer:
+        if (props_literal_integer == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("literal_integer");
+          props_literal_integer = cpb.create();
+        }
+        return props_literal_integer;
       case LanguageConceptSwitch.semicolon:
         if (props_semicolon == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

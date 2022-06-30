@@ -141,5 +141,32 @@
       <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
     </node>
   </node>
+  <node concept="24kQdi" id="4mYSElTCJW5">
+    <ref role="1XX52x" to="xtkh:4mYSElTCocZ" resolve="BinaryExpression" />
+    <node concept="3EZMnI" id="4mYSElTCLtE" role="2wV5jI">
+      <node concept="3F1sOY" id="4mYSElTCMoh" role="3EZMnx">
+        <ref role="1NtTu8" to="xtkh:4mYSElTCumK" resolve="left" />
+      </node>
+      <node concept="3F1sOY" id="4mYSElTCTGx" role="3EZMnx">
+        <ref role="1NtTu8" to="xtkh:4mYSElTCPIV" resolve="operation" />
+      </node>
+      <node concept="3F1sOY" id="4mYSElTCUUI" role="3EZMnx">
+        <ref role="1NtTu8" to="xtkh:4mYSElTCyay" resolve="right" />
+      </node>
+      <node concept="2iRfu4" id="4mYSElTCLtH" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4mYSElTD$HR">
+    <ref role="1XX52x" to="xtkh:4mYSElTC9WU" resolve="literal_integer" />
+    <node concept="3F0A7n" id="4mYSElTD_mp" role="2wV5jI">
+      <ref role="1NtTu8" to="xtkh:4mYSElTCdOr" resolve="value" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4mYSElTDZlI">
+    <ref role="1XX52x" to="xtkh:4mYSElTCi0Y" resolve="Plusoperation" />
+    <node concept="PMmxH" id="4mYSElTE0kK" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
 </model>
 
